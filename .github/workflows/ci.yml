@@ -19,8 +19,7 @@ jobs:
 
     - run: cmake --build build
 
-    - run: ctest --output-on-failure
-      working-directory: build
+    - run: ctest --test-dir build
 
   mac:
     needs: linux
@@ -30,10 +29,8 @@ jobs:
 
     - run: cmake -B build
       env:
-        CC: gcc-10
-        FC: gfortran-10
+        FC: gfortran-11
 
     - run: cmake --build build
 
-    - run: ctest --output-on-failure
-      working-directory: build
+    - run: ctest --test-dir build
