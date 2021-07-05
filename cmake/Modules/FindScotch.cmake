@@ -56,7 +56,6 @@ endif()
 foreach(_lib ${_to_find})
   find_library(Scotch_${_lib}_LIBRARY
     NAMES ${_lib}
-    NAMES_PER_DIR
     PATH_SUFFIXES lib lib32 lib64)
 
   list(APPEND Scotch_LIBRARIES ${Scotch_${_lib}_LIBRARY})
