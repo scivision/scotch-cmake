@@ -51,7 +51,7 @@ if(NOT Scotch_FOUND)
 
   ExternalProject_Add(Scotch
   GIT_REPOSITORY https://gitlab.inria.fr/scotch/scotch.git
-  GIT_TAG v6.1.0
+  GIT_TAG v6.1.1
   GIT_SHALLOW true
   UPDATE_DISCONNECTED true
   PATCH_COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_BINARY_DIR}/Makefile.inc ${_src}

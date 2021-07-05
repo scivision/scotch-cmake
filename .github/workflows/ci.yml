@@ -29,6 +29,8 @@ jobs:
 
     - run: cmake -B build
       env:
+        # old Scotch makefiles need GCC to avoid missing ctypes.h
+        CC: gcc-11
         FC: gfortran-11
 
     - run: cmake --build build
