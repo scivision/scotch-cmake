@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.15...3.21)
 
-if(NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE Release CACHE STRING "release or debug")
-endif()
-
 project(Scotch
   LANGUAGES C
   DESCRIPTION "Build and use Scotch (Makefile-based) from CMake projects"
@@ -12,6 +8,8 @@ project(Scotch
 include(CTest)
 
 option(scotch_external "build Scotch")
+
+set_directory_properties(PROPERTIES EP_UPDATE_DISCONNECTED true)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules)
 

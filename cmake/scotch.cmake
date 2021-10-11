@@ -53,7 +53,6 @@ if(NOT Scotch_FOUND)
   GIT_REPOSITORY https://gitlab.inria.fr/scotch/scotch.git
   GIT_TAG v6.1.1
   GIT_SHALLOW true
-  UPDATE_DISCONNECTED true
   PATCH_COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_BINARY_DIR}/Makefile.inc ${_src}
   CONFIGURE_COMMAND ""
   BUILD_COMMAND ${MAKE_EXECUTABLE} -j${Ncpu} -C ${_src} ${_targ}

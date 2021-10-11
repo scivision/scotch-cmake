@@ -1,5 +1,8 @@
 name: ci
 
+env:
+  CMAKE_BUILD_TYPE: Release
+
 on:
   push:
     paths:
@@ -16,9 +19,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - run: cmake -B build
-
     - run: cmake --build build
-
     - run: ctest --test-dir build
 
   mac:
@@ -34,5 +35,4 @@ jobs:
         FC: gfortran-11
 
     - run: cmake --build build
-
     - run: ctest --test-dir build
