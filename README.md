@@ -1,5 +1,9 @@
 # Scotch CMake build
 
+NOTE: Scotch 7.0 added the native ability to build with CMake, so this project is archived.
+
+---
+
 ![ci](https://github.com/scivision/scotch-cmake/workflows/ci/badge.svg)
 
 Building
